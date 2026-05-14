@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Sign In Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #141e30, #243b55);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        form {
+            width: 100%;
+            max-width: 700px;
+        }
+
+        fieldset {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            border: none;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        }
+
+        legend {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: white;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            box-shadow: 0 0 10px cyan;
+        }
+
+        textarea {
+            resize: none;
+            height: 90px;
+        }
+
+        .gender-box {
+            color: white;
+            margin-bottom: 18px;
+        }
+
+        .gender-box input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .password-box {
+            position: relative;
+        }
+
+        .show-btn {
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .signin-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            background: #00c853;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .signin-btn:hover {
+            background: #00e676;
+            transform: scale(1.02);
+        }
+
+        .bottom-text {
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .bottom-text a {
+            color: cyan;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .bottom-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="myForm">
+
+        <fieldset>
+
+            <legend>Sign In Form</legend>
+
+            <!-- Username -->
+            <label>Username</label>
+            <input type="text" id="username"
+                placeholder="Enter Username" required>
+
+            <!-- Email -->
+            <label>Email</label>
+            <input type="text" id="email"
+                placeholder="Enter Email" required>
+
+            <!-- Mobile -->
+            <label>Mobile Number</label>
+            <input type="text" id="mobile"
+                placeholder="Enter Mobile Number" required>
+
+            <!-- DOB -->
+            <label>Date Of Birth</label>
+            <input type="date" id="dob" required>
+
+            <!-- Appointment -->
+            <label>Appointment</label>
+            <input type="datetime-local" required>
+
+            <!-- Gender -->
+            <label>Gender</label>
+            <div class="gender-box">
+                <input type="radio" name="gender" required> Male
+                <input type="radio" name="gender"> Female
+            </div>
+
+            <!-- Country -->
+            <label>Country</label>
+            <select required>
+                <option value="">Select Country</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>Australia</option>
+            </select>
+
+            <!-- Address -->
+            <label>Address & Feedback</label>
+            <textarea required></textarea>
+
+            <!-- PDF Upload -->
+            <label>Upload PDF File</label>
+            <input type="file" id="file" required>
+
+            <!-- Password -->
+            <label>Password</label>
+
+            <div class="password-box">
+                <input type="password" id="password"
+                    placeholder="Enter Strong Password" required>
+
+                <span class="show-btn"
+                    onclick="togglePassword()">Show</span>
+            </div>
+
+            <!-- Search -->
+            <label>Search</label>
+            <input type="search"
+                placeholder="Search Anything">
+
+            <!-- Month -->
+            <label>Month</label>
+            <input type="month">
+
+            <!-- Week -->
+            <label>Week</label>
+            <input type="week">
+
+            <!-- Range -->
+            <label>Range</label>
+            <input type="range">
+
+            <!-- URL -->
+            <label>URL</label>
+            <input type="url"
+                placeholder="https://example.com">
+
+            <!-- Color -->
+            <label>Color</label>
+            <input type="color">
+
+            <!-- Sign In Button -->
+            <button type="submit"
+                class="signin-btn">
+                Sign In
+            </button>
+
+            <!-- Bottom Text -->
+            <div class="bottom-text">
+                I have not registered?
+                <a href="#">Create Account</a>
+            </div>
+
+        </fieldset>
+
+    </form>
+
+    <script>
+
+        // FORM VALIDATION
+
+        document.getElementById("myForm")
+            .addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+                let username =
+                    document.getElementById("username").value;
+
+                let email =
+                    document.getElementById("email").value;
+
+                let mobile =
+                    document.getElementById("mobile").value;
+
+                let password =
+                    document.getElementById("password").value;
+
+                let file =
+                    document.getElementById("file").value;
+
+                let dob =
+                    document.getElementById("dob").value;
+
+                // USERNAME VALIDATION
+                let usernamePattern =
+                    /^[A-Za-z0-9_]+$/;
+
+                if (!usernamePattern.test(username)) {
+
+                    alert(
+                        "Username can contain only A-Z, a-z, numbers and underscore (_)"
+                    );
+
+                    return;
+                }
+
+                // EMAIL VALIDATION
+                let emailPattern =
+                    /^[^\s@]+@[^\s@]+\.(com)$/;
+
+                if (!emailPattern.test(email)) {
+
+                    alert(
+                        "Enter valid email with @ and .com"
+                    );
+
+                    return;
+                }
+
+                // MOBILE VALIDATION
+                let mobilePattern =
+                    /^[0-9]{10}$/;
+
+                if (!mobilePattern.test(mobile)) {
+
+                    alert(
+                        "Mobile number must be exactly 10 digits"
+                    );
+
+                    return;
+                }
+
+                // PASSWORD VALIDATION
+                let passwordPattern =
+                    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*!]).{8,}$/;
+
+                if (!passwordPattern.test(password)) {
+
+                    alert(
+                        "Password must contain:\n\n✔ One Uppercase\n✔ One Lowercase\n✔ One Number\n✔ One Special Character\n✔ Minimum 8 Characters"
+                    );
+
+                    return;
+                }
+
+                // PDF VALIDATION
+                let allowedExtension =
+                    /(\.pdf)$/i;
+
+                if (!allowedExtension.exec(file)) {
+
+                    alert(
+                        "Only PDF files are allowed"
+                    );
+
+                    return;
+                }
+
+                // AGE VALIDATION
+                let birthDate = new Date(dob);
+
+                let today = new Date();
+
+                let age =
+                    today.getFullYear() -
+                    birthDate.getFullYear();
+
+                if (age < 18) {
+
+                    alert(
+                        "Age must be 18 or above"
+                    );
+
+                    return;
+                }
+
+                // SUCCESS MESSAGE
+                alert(
+                    "Sign In Successfully ✅"
+                );
+
+            });
+
+        // SHOW / HIDE PASSWORD
+
+        function togglePassword() {
+
+            let password =
+                document.getElementById("password");
+
+            let btn =
+                document.querySelector(".show-btn");
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+                btn.innerHTML = "Hide";
+
+            }
+
+            else {
+
+                password.type = "password";
+
+                btn.innerHTML = "Show";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
