@@ -1,0 +1,207 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain Effect</title>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+
+        .rain {
+            position: absolute;
+            width: 2px;
+            height: 100px;
+            background: linear-gradient(transparent, cyan);
+            animation: rain 1s linear infinite;
+        }
+
+        @keyframes rain {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="playRain()">
+        Start Rain
+    </button>
+
+    <audio id="rain" loop>
+        <source src="../css/rain_sound.mp3" type="audio/mp3">
+    </audio>
+    
+
+    <script>
+
+
+         function playRain() {
+
+            let audio = document.getElementById("rain");
+
+            audio.play();
+
+        }
+        for (let i = 0; i < 200; i++) {
+
+            let drop = document.createElement("div");
+            drop.classList.add("rain");
+
+            drop.style.left = Math.random() * window.innerWidth + "px";
+
+            drop.style.animationDuration =
+                Math.random() * 1 + 0.5 + "s";
+
+            drop.style.opacity = Math.random();
+
+            document.body.appendChild(drop);
+        }
+        
+
+        
+
+    </script>
+
+</body>
+
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storm Effect</title>
+
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    animation: neonGlow 5s infinite;
+}
+
+/* 🌧️ Rain */
+.rain {
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background: linear-gradient(transparent, cyan);
+    animation: fall linear infinite;
+}
+
+/* 🌬️ Wind + Rain Movement */
+@keyframes fall {
+    0% {
+        transform: translate(0, -100px) rotate(15deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(80px, 100vh) rotate(15deg);
+        opacity: 1;
+    }
+}
+
+/* ⚡ Thunder Flash */
+.flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 🌈 Neon Glow Background */
+@keyframes neonGlow {
+    0% { background: #000; }
+    50% { background: #020014; }
+    100% { background: #000; }
+}
+
+/* Button */
+button {
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<button onclick="startStorm()">Start Storm</button>
+
+<div class="flash" id="flash"></div>
+
+<audio id="thunder" src="../css/thunder_sound.mp3" type="mp3"></audio>
+
+<script>
+
+// 🌧️ Create Rain
+for (let i = 0; i < 200; i++) {
+    let drop = document.createElement("div");
+    drop.classList.add("rain");
+
+    drop.style.left = Math.random() * window.innerWidth + "px";
+    drop.style.animationDuration = (Math.random() * 1 + 0.5) + "s";
+    drop.style.opacity = Math.random();
+
+    document.body.appendChild(drop);
+}
+
+// ⚡ Thunder Flash Effect
+function lightning() {
+    let flash = document.getElementById("flash");
+    flash.style.opacity = 1;
+
+    setTimeout(() => {
+        flash.style.opacity = 0;
+    }, 100);
+}
+
+// 🔊 Thunder Sound
+function playThunder() {
+    let audio = document.getElementById("thunder");
+    audio.currentTime = 0;
+    audio.play();
+}
+
+// 🌩️ Storm Controller
+function startStorm() {
+
+    setInterval(() => {
+
+        // random thunder
+        if (Math.random() > 0.7) {
+            lightning();
+            playThunder();
+        }
+
+    }, 2000);
+}
+
+</script>
+
+</body>
+</html>
