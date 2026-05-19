@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexaGrow – Services</title>
+<link rel="stylesheet" href="../nexagrow/style.css">
+<style>
+/* ── PAGE-SPECIFIC: SERVICES ── */
+.service-row { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:2.5rem; display:grid; grid-template-columns:auto 1fr; gap:2rem; align-items:center; transition:.25s; margin-bottom:1.5rem; }
+.service-row:hover { box-shadow:var(--shadow-lg); transform:translateY(-3px); }
+.service-row-icon { width:90px; height:90px; border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:2.8rem; flex-shrink:0; }
+.service-row h3 { font-size:1.2rem; font-weight:700; margin-bottom:.5rem; display:flex; align-items:center; gap:.8rem; }
+.service-row p { color:var(--muted); font-size:.9rem; line-height:1.75; margin-bottom:1rem; }
+.tag-pills { display:flex; gap:.5rem; flex-wrap:wrap; }
+.tag-pill { font-size:.75rem; font-weight:600; padding:.28rem .7rem; border-radius:50px; }
+.pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:860px; margin:0 auto; }
+@media(max-width:800px){ .service-row{ grid-template-columns:1fr; } .pricing-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/919876543210" class="wa-float" target="_blank">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Nexa<span>Grow</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Free Consultation</a>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="marquee-strip">
+  <marquee scrollamount="5" direction="right">💡 SEO &nbsp;·&nbsp; Social Media &nbsp;·&nbsp; Google Ads &nbsp;·&nbsp; Meta Ads &nbsp;·&nbsp; Web Dev &nbsp;·&nbsp; Content &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Email Marketing &nbsp;·&nbsp; Video &nbsp;·&nbsp; WhatsApp Marketing &nbsp;·&nbsp; Lead Generation</marquee>
+</div>
+
+<!-- HEADER -->
+<div class="section" style="padding-bottom:2rem">
+  <div class="section-header center">
+    <div class="tag tag-orange">Full Service Suite</div>
+    <h2 class="section-title">Everything You Need to <em>Win Online</em></h2>
+    <p class="section-sub" style="margin:0 auto">Comprehensive digital marketing solutions tailored to your goals and budget.</p>
+  </div>
+</div>
+
+<!-- MAIN SERVICES (big rows) -->
+<div class="section" style="padding-top:0">
+  <div class="service-row reveal">
+    <div class="service-row-icon" style="background:var(--orange-light)">🔍</div>
+    <div>
+      <h3>Search Engine Optimization <span class="tag tag-orange" style="font-size:.7rem;margin:0">Most Popular</span></h3>
+      <p>Rank on page 1 of Google with our proven SEO methodology. We handle keyword research, on-page optimization, technical SEO audits, link building, and local SEO to bring consistent, high-quality organic traffic to your website.</p>
+      <div class="tag-pills">
+        <span class="tag-pill" style="background:var(--orange-light);color:var(--orange)">Keyword Research</span>
+        <span class="tag-pill" style="background:var(--orange-light);color:var(--orange)">Technical SEO</span>
+        <span class="tag-pill" style="background:var(--orange-light);color:var(--orange)">Link Building</span>
+        <span class="tag-pill" style="background:var(--orange-light);color:var(--orange)">Local SEO</span>
+        <span class="tag-pill" style="background:var(--orange-light);color:var(--orange)">Monthly Reporting</span>
+      </div>
+    </div>
+  </div>
+  <div class="service-row reveal">
+    <div class="service-row-icon" style="background:var(--blue-light)">📱</div>
+    <div>
+      <h3>Social Media Marketing</h3>
+      <p>Build a powerful social presence on Instagram, Facebook, LinkedIn & YouTube. We create platform-specific strategies, design engaging content, manage your community & run high-converting campaigns that turn followers into buyers.</p>
+      <div class="tag-pills">
+        <span class="tag-pill" style="background:var(--blue-light);color:var(--blue)">Instagram Reels</span>
+        <span class="tag-pill" style="background:var(--blue-light);color:var(--blue)">Facebook Ads</span>
+        <span class="tag-pill" style="background:var(--blue-light);color:var(--blue)">LinkedIn B2B</span>
+        <span class="tag-pill" style="background:var(--blue-light);color:var(--blue)">Community Mgmt</span>
+        <span class="tag-pill" style="background:var(--blue-light);color:var(--blue)">Content Calendar</span>
+      </div>
+    </div>
+  </div>
+  <div class="service-row reveal">
+    <div class="service-row-icon" style="background:var(--green-light)">📊</div>
+    <div>
+      <h3>Google & Meta Advertising</h3>
+      <p>Maximize ROI with precision-targeted paid campaigns. From Search & Shopping to YouTube and Display — our certified team handles campaign setup, A/B testing, audience targeting, bid optimization & conversion tracking.</p>
+      <div class="tag-pills">
+        <span class="tag-pill" style="background:var(--green-light);color:var(--green)">Search Ads</span>
+        <span class="tag-pill" style="background:var(--green-light);color:var(--green)">Shopping Ads</span>
+        <span class="tag-pill" style="background:var(--green-light);color:var(--green)">YouTube Ads</span>
+        <span class="tag-pill" style="background:var(--green-light);color:var(--green)">Remarketing</span>
+        <span class="tag-pill" style="background:var(--green-light);color:var(--green)">Display Network</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MORE SERVICES GRID -->
+<div class="bg-white bg-section">
+  <div class="section">
+    <div class="section-header center">
+      <div class="tag tag-purple">More Services</div>
+      <h2 class="section-title">We Do <em>Much More</em></h2>
+    </div>
+    <div class="card-grid-3">
+      <div class="scard purple reveal"><div class="card-icon" style="background:var(--purple-light)">💻</div><h3>Website Development</h3><p>High-converting, mobile-first websites. E-commerce, landing pages, portfolios & corporate sites built to convert visitors into buyers.</p></div>
+      <div class="scard orange reveal"><div class="card-icon" style="background:var(--orange-light)">✍️</div><h3>Content Writing</h3><p>SEO-optimized blogs, website copy, ad scripts & social captions that rank on Google and turn readers into buyers.</p></div>
+      <div class="scard blue reveal"><div class="card-icon" style="background:var(--blue-light)">🎨</div><h3>Branding & Design</h3><p>Logo, brand guidelines, marketing collaterals, packaging & visual storytelling for lasting first impressions.</p></div>
+      <div class="scard green reveal"><div class="card-icon" style="background:var(--green-light)">📧</div><h3>Email Marketing</h3><p>Automated sequences & newsletters that nurture leads and drive repeat purchases at scale.</p></div>
+      <div class="scard purple reveal"><div class="card-icon" style="background:var(--purple-light)">🎬</div><h3>Video Marketing</h3><p>Reels, explainer videos, product demos & YouTube marketing that builds brand authority fast.</p></div>
+      <div class="scard orange reveal"><div class="card-icon" style="background:var(--orange-light)">📲</div><h3>WhatsApp Marketing</h3><p>Bulk campaigns, chatbot setup & automated follow-ups to keep your leads engaged and converting.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="section">
+  <div class="section-header center">
+    <div class="tag tag-orange">Pricing</div>
+    <h2 class="section-title">Transparent <em>Monthly Packages</em></h2>
+    <p class="section-sub" style="margin:0 auto">No hidden costs. Cancel anytime. Scale when you're ready.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="price-card reveal">
+      <div class="price-plan">Starter</div>
+      <div class="price-amount">₹15K<sub>/mo</sub></div>
+      <ul class="price-features">
+        <li>SEO Optimization</li>
+        <li>Social Media (2 platforms)</li>
+        <li>8 posts/month</li>
+        <li>Monthly Report</li>
+        <li>Email Support</li>
+      </ul>
+      <a href="contact.html" class="btn-ghost" style="width:100%;text-align:center;border-radius:10px;display:block">Get Started</a>
+    </div>
+    <div class="price-card featured reveal">
+      <div class="popular-badge">⭐ Most Popular</div>
+      <div class="price-plan">Growth</div>
+      <div class="price-amount" style="color:var(--orange)">₹35K<sub>/mo</sub></div>
+      <ul class="price-features">
+        <li>SEO + Google Ads</li>
+        <li>Social Media (4 platforms)</li>
+        <li>20 posts/month</li>
+        <li>Email Marketing</li>
+        <li>Weekly Reports</li>
+        <li>Dedicated Manager</li>
+      </ul>
+      <a href="contact.html" class="btn-primary" style="width:100%;text-align:center;border-radius:10px;display:block">Get Started</a>
+    </div>
+    <div class="price-card reveal">
+      <div class="price-plan">Enterprise</div>
+      <div class="price-amount">Custom</div>
+      <ul class="price-features">
+        <li>Full Digital Suite</li>
+        <li>All platforms covered</li>
+        <li>Unlimited content</li>
+        <li>Real-time dashboard</li>
+        <li>Priority 24/7 support</li>
+        <li>Custom strategy</li>
+      </ul>
+      <a href="contact.html" class="btn-ghost" style="width:100%;text-align:center;border-radius:10px;display:block">Let's Talk</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Nexa<span>Grow</span></a>
+      <p>India's trusted digital marketing agency since 2016.</p>
+      <div class="social-row" style="margin-top:1.5rem"><div class="social-btn">📷</div><div class="social-btn">👤</div><div class="social-btn">💼</div><div class="social-btn">▶️</div></div>
+    </div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">SEO Optimization</a></li><li><a href="services.html">Social Media</a></li><li><a href="services.html">Google Ads</a></li><li><a href="services.html">Web Development</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a>📍 Ahmedabad, Gujarat</a></li><li><a>📞 +91 98765 43210</a></li><li><a>✉️ hello@nexagrow.in</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><div class="footer-bottom-inner"><p>© 2024 NexaGrow Digital. All rights reserved.</p><p>Privacy Policy &nbsp;·&nbsp; Terms of Service</p></div></div>
+</footer>
+
+<script src="../nexagrow/main.js"></script>
+</body>
+</html>

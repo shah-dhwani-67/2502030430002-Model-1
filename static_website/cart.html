@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | DigiMarket</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+        }
+
+        /* Navbar */
+        header {
+            background: #111;
+            padding: 15px 0;
+        }
+
+        .nav {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00aaff;
+        }
+
+        /* Cart Section */
+        .cart-section {
+            width: 90%;
+            margin: 60px auto;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #111;
+        }
+
+        /* Cart Container */
+        .cart-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        /* Cart Items */
+        .cart-items {
+            flex: 2;
+        }
+
+        .cart-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cart-info h2 {
+            margin-bottom: 10px;
+            color: #00aaff;
+        }
+
+        .cart-info p {
+            color: #555;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Buttons */
+        .remove-btn {
+            padding: 10px 18px;
+            border: none;
+            background: red;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .remove-btn:hover {
+            background: darkred;
+        }
+
+        /* Summary */
+        .summary {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            height: fit-content;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .summary h2 {
+            margin-bottom: 25px;
+            color: #111;
+        }
+
+        .summary-box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .total {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #111;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            background: #00aaff;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        .checkout-btn:hover {
+            background: #0077aa;
+        }
+
+        /* Empty Cart */
+        .empty {
+            text-align: center;
+            color: #777;
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .cart-container {
+                flex-direction: column;
+            }
+
+            .cart-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header>
+
+    <div class="nav">
+
+        <h2 class="logo">DigiMarket</h2>
+
+        <ul class="nav-links">
+            <li><a href="../static_website/home.html">Home</a></li>
+            <li><a href="../static_website/service.html">Services</a></li>
+            <li><a href="../static_website/about.html">About</a></li>
+            <li><a href="../static_website/contact.html">Contact</a></li>
+            <li><a href="../static_website/cart.html">Cart</a></li>
+        </ul>
+
+    </div>
+
+</header>
+
+<!-- Cart -->
+<section class="cart-section">
+
+    <h1 class="title">Your Cart</h1>
+
+    <div class="cart-container">
+
+        <!-- Cart Items -->
+        <div class="cart-items" id="cart-items">
+
+            <!-- Item 1 -->
+            <div class="cart-card">
+
+                <div class="cart-info">
+
+                    <h2>SEO Optimization</h2>
+
+                    <p>
+                        Keyword Research, Technical SEO,
+                        Monthly Reports
+                    </p>
+
+                    <div class="price">₹4999</div>
+
+                </div>
+
+                <button class="remove-btn"
+                    onclick="removeItem(this, 4999)">
+                    Remove
+                </button>
+
+            </div>
+
+            <!-- Item 2 -->
+            <div class="cart-card">
+
+                <div class="cart-info">
+
+                    <h2>Social Media Marketing</h2>
+
+                    <p>
+                        Instagram Marketing, Facebook Ads,
+                        Content Strategy
+                    </p>
+
+                    <div class="price">₹6999</div>
+
+                </div>
+
+                <button class="remove-btn"
+                    onclick="removeItem(this, 6999)">
+                    Remove
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Summary -->
+        <div class="summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-box">
+                <span>Services</span>
+                <span id="service-count">2</span>
+            </div>
+
+            <div class="summary-box total">
+                <span>Total</span>
+                <span id="total-price">₹11998</span>
+            </div>
+
+            <button class="checkout-btn">
+                Proceed To Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="empty" id="empty-message" style="display:none;">
+        Your cart is empty.
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 DigiMarket Agency | All Rights Reserved</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+
+    let total = 11998;
+    let count = 2;
+
+    function removeItem(button, price) {
+
+        // Remove Card
+        button.parentElement.remove();
+
+        // Update Total
+        total -= price;
+        count--;
+
+        document.getElementById("total-price").innerText = "₹" + total;
+        document.getElementById("service-count").innerText = count;
+
+        // Empty Cart Message
+        if(count <= 0) {
+
+            document.getElementById("empty-message").style.display = "block";
+
+        }
+    }
+
+</script>
+
+</body>
+</html>

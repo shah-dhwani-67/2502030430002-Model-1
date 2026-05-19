@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexaGrow – Contact Us</title>
+<link rel="stylesheet" href="../nexagrow/style.css">
+<style>
+/* ── PAGE-SPECIFIC: CONTACT ── */
+.contact-layout { display:grid; grid-template-columns:1fr 1.4fr; gap:2.5rem; align-items:start; }
+.info-card { background:var(--orange); border-radius:var(--radius); padding:2.5rem; color:#fff; }
+.info-card h3 { font-family:'Fraunces',serif; font-size:1.8rem; font-weight:900; margin-bottom:.7rem; }
+.info-card > p { opacity:.85; line-height:1.75; margin-bottom:2rem; font-size:.92rem; }
+.cinfo-item { display:flex; gap:1rem; align-items:flex-start; margin-bottom:1.5rem; }
+.cinfo-icon { width:42px; height:42px; background:rgba(255,255,255,.2); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+.cinfo-text strong { display:block; font-size:.9rem; font-weight:700; margin-bottom:.2rem; }
+.cinfo-text span { font-size:.83rem; opacity:.82; line-height:1.5; display:block; }
+.wa-btn { display:flex; align-items:center; gap:.8rem; background:#25D366; color:#fff; padding:1rem 1.4rem; border-radius:var(--radius-sm); text-decoration:none; font-weight:700; font-size:.95rem; margin-top:2rem; transition:.2s; }
+.wa-btn:hover { background:#1db954; transform:scale(1.02); }
+.map-box { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; height:200px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.5rem; position:relative; margin-top:1.5rem; }
+.map-grid-bg { position:absolute; inset:0; background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px); background-size:28px 28px; }
+.map-pin { position:relative; z-index:1; text-align:center; }
+.faq-item { background:var(--white); border:1px solid var(--border); border-radius:var(--radius-sm); margin-bottom:.8rem; overflow:hidden; }
+.faq-q { padding:1.1rem 1.4rem; font-weight:700; font-size:.9rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; user-select:none; }
+.faq-q::after { content:'＋'; color:var(--orange); font-size:1.2rem; transition:.3s; }
+.faq-item.open .faq-q::after { transform:rotate(45deg); }
+.faq-a { padding:0 1.4rem; max-height:0; overflow:hidden; transition:.3s ease; font-size:.87rem; color:var(--muted); line-height:1.7; }
+.faq-item.open .faq-a { max-height:200px; padding:0 1.4rem 1.1rem; }
+@media(max-width:900px){ .contact-layout{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/919876543210" class="wa-float" target="_blank">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Nexa<span>Grow</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Free Consultation</a>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="marquee-strip">
+  <marquee scrollamount="4">📞 +91 98765 43210 &nbsp;·&nbsp; ✉️ hello@nexagrow.in &nbsp;·&nbsp; 📍 Satellite, Ahmedabad &nbsp;·&nbsp; 🕒 Mon–Sat 10am–7pm &nbsp;·&nbsp; 💬 WhatsApp for Instant Reply &nbsp;·&nbsp; Free Consultation Available</marquee>
+</div>
+
+<!-- HEADER -->
+<div class="section" style="padding-bottom:1rem">
+  <div class="section-header center">
+    <div class="tag tag-orange">Get In Touch</div>
+    <h2 class="section-title">Let's Start Your <em>Growth Journey</em></h2>
+    <p class="section-sub" style="margin:0 auto">Fill out the form and we'll get back to you within 24 hours — guaranteed.</p>
+  </div>
+</div>
+
+<!-- CONTACT GRID -->
+<div class="section" style="padding-top:0">
+  <div class="contact-layout">
+
+    <!-- LEFT: INFO -->
+    <div>
+      <div class="info-card reveal">
+        <h3>Ready to Grow? Let's Talk.</h3>
+        <p>Our team is ready to craft a custom digital marketing strategy for your business. No pressure, no commitment — just honest advice.</p>
+        <div class="cinfo-item">
+          <div class="cinfo-icon">📞</div>
+          <div class="cinfo-text"><strong>Phone</strong><span>+91 98765 43210</span><span>+91 76543 21098</span></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon">✉️</div>
+          <div class="cinfo-text"><strong>Email</strong><span>hello@nexagrow.in</span><span>support@nexagrow.in</span></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon">📍</div>
+          <div class="cinfo-text"><strong>Office Address</strong><span>401, Zion Prime, Nr. Shyamal Cross Road,<br>Satellite, Ahmedabad – 380015</span></div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon">🕒</div>
+          <div class="cinfo-text"><strong>Business Hours</strong><span>Monday – Saturday: 10:00 AM – 7:00 PM</span><span>Sunday: Closed</span></div>
+        </div>
+        <div class="social-row">
+          <div class="social-btn">📷</div>
+          <div class="social-btn">👤</div>
+          <div class="social-btn">💼</div>
+          <div class="social-btn">▶️</div>
+          <div class="social-btn">🐦</div>
+        </div>
+      </div>
+
+      <!-- MAP -->
+      <div class="map-box reveal">
+        <div class="map-grid-bg"></div>
+        <div class="map-pin">
+          <div style="font-size:2.2rem;margin-bottom:.3rem">📍</div>
+          <div style="font-weight:700;color:var(--ink);font-size:.95rem">NexaGrow Digital</div>
+          <div style="font-size:.82rem;color:var(--muted);margin:.2rem 0">Satellite, Ahmedabad – 380015</div>
+          <a href="https://maps.google.com" target="_blank" style="color:var(--orange);font-size:.82rem;font-weight:700">Open in Google Maps →</a>
+        </div>
+      </div>
+
+      <!-- WHATSAPP -->
+      <a href="https://wa.me/919876543210" target="_blank" class="wa-btn reveal">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        💬 Chat on WhatsApp — We Reply Instantly!
+      </a>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="form-card reveal">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:.4rem">Send Us a Message</h3>
+      <p style="color:var(--muted);font-size:.85rem;margin-bottom:1.5rem">We respond within 24 hours on business days.</p>
+      <div class="form-row">
+        <div class="form-group"><label>Your Name *</label><input type="text" placeholder="Rahul Sharma" id="ct-name"></div>
+        <div class="form-group"><label>Business Name *</label><input type="text" placeholder="Your Company" id="ct-biz"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Phone *</label><input type="tel" placeholder="+91 98765 43210" id="ct-phone"></div>
+        <div class="form-group"><label>Email</label><input type="email" placeholder="you@company.com" id="ct-email"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Service Interested In</label>
+          <select id="ct-service">
+            <option value="">Select...</option>
+            <option>SEO Optimization</option>
+            <option>Social Media Marketing</option>
+            <option>Google / Meta Ads</option>
+            <option>Website Development</option>
+            <option>Content Writing</option>
+            <option>Full Digital Marketing</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Budget Range</label>
+          <select id="ct-budget">
+            <option value="">Select...</option>
+            <option>Under ₹10,000/mo</option>
+            <option>₹10K – ₹25K/mo</option>
+            <option>₹25K – ₹50K/mo</option>
+            <option>₹50K+/mo</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group full">
+        <label>Your Message *</label>
+        <textarea placeholder="Tell us about your project, goals & timeline..." id="ct-msg"></textarea>
+      </div>
+      <button class="submit-btn" onclick="submitForm('ct')">📩 Send My Enquiry</button>
+      <div class="success-msg" id="ct-success">✅ Message sent! Our team will contact you within 24 hours.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="bg-white bg-section">
+  <div class="section">
+    <div class="section-header center">
+      <div class="tag tag-blue">FAQ</div>
+      <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+    </div>
+    <div style="max-width:700px;margin:0 auto">
+      <div class="faq-item reveal"><div class="faq-q" onclick="toggleFaq(this)">How soon will I see results from digital marketing?</div><div class="faq-a">SEO typically shows results in 3-6 months, while paid ads can generate leads from day one. Social media growth usually takes 2-4 months to build momentum. We set realistic timelines during our free consultation.</div></div>
+      <div class="faq-item reveal"><div class="faq-q" onclick="toggleFaq(this)">What is the minimum contract period?</div><div class="faq-a">We recommend a minimum of 3 months for meaningful results, but we don't lock you into long contracts. Our monthly plans are flexible, and most clients stay long-term because they see results.</div></div>
+      <div class="faq-item reveal"><div class="faq-q" onclick="toggleFaq(this)">Do you work with small businesses and startups?</div><div class="faq-a">Absolutely! We have packages starting from ₹15,000/month and work with businesses of all sizes — from solo founders to large enterprises. We tailor our strategy to your specific budget and goals.</div></div>
+      <div class="faq-item reveal"><div class="faq-q" onclick="toggleFaq(this)">How do you report on campaign performance?</div><div class="faq-a">We provide weekly or monthly reports depending on your plan, covering key metrics like traffic, leads, conversions, ROAS, and revenue impact. Growth plan clients get access to a real-time dashboard.</div></div>
+      <div class="faq-item reveal"><div class="faq-q" onclick="toggleFaq(this)">Will I have a dedicated account manager?</div><div class="faq-a">Growth and Enterprise plan clients get a dedicated account manager as their single point of contact. Starter plan clients have access to our team via email and scheduled calls.</div></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">Nexa<span>Grow</span></a>
+      <p>India's trusted digital marketing agency helping businesses grow smarter and faster since 2016.</p>
+      <div class="social-row" style="margin-top:1.5rem"><div class="social-btn">📷</div><div class="social-btn">👤</div><div class="social-btn">💼</div><div class="social-btn">▶️</div></div>
+    </div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="services.html">SEO Optimization</a></li><li><a href="services.html">Social Media</a></li><li><a href="services.html">Google Ads</a></li><li><a href="services.html">Web Development</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a>📍 Ahmedabad, Gujarat</a></li><li><a>📞 +91 98765 43210</a></li><li><a>✉️ hello@nexagrow.in</a></li><li><a>🕒 Mon–Sat, 10am–7pm</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><div class="footer-bottom-inner"><p>© 2024 NexaGrow Digital. All rights reserved.</p><p>Privacy Policy &nbsp;·&nbsp; Terms of Service</p></div></div>
+</footer>
+
+<script src="../nexagrow/main.js"></script>
+<script>
+function toggleFaq(el) {
+  const item = el.parentElement;
+  item.classList.toggle('open');
+}
+</script>
+</body>
+</html>

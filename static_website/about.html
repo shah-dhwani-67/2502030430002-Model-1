@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | DigiMarket</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+        }
+
+        /* Navbar */
+        header {
+            background: #111;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00aaff;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 50vh;
+            background:
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f")
+                center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 20px;
+        }
+
+        .about-container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .about-img {
+            flex: 1;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Mission Section */
+        .mission {
+            background: #111;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .mission h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+
+        .mission p {
+            width: 80%;
+            margin: auto;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .team-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #111;
+        }
+
+        .team-grid {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .team-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.4s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .team-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .team-card h3 {
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .team-card p {
+            color: #777;
+        }
+
+        /* Footer */
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .mission p {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="nav">
+        <h2 class="logo">DigiMarket</h2>
+
+        <ul class="nav-links">
+            <li><a href="../static_website/home.html">Home</a></li>
+            <li><a href="../static_website/service.html">Services</a></li>
+            <li><a href="../static_website/about.html">About</a></li>
+            <li><a href="../static_website/contact.html">Contact</a></li>
+            <li><a href="../static_website/cart.html">Cart</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div>
+        <h1>About Us</h1>
+        <p>Creative minds behind powerful digital marketing strategies</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-text">
+            <h2>Who We Are</h2>
+
+            <p>
+                DigiMarket is a modern digital marketing agency helping
+                businesses grow online through SEO, social media marketing,
+                paid ads, and website development.
+            </p>
+
+            <p>
+                Our team focuses on creative strategies, strong branding,
+                and data-driven campaigns that deliver real business growth.
+            </p>
+
+            <p>
+                We believe every business deserves a strong online presence
+                in today’s digital world.
+            </p>
+        </div>
+
+        <div class="about-img">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Mission -->
+<section class="mission">
+
+    <h2>Our Mission</h2>
+
+    <p>
+        Our mission is to help startups, brands, and local businesses
+        achieve digital success using affordable and innovative
+        marketing solutions. We aim to create long-term growth,
+        trust, and strong online visibility for our clients.
+    </p>
+
+</section>
+
+<!-- Team -->
+<section class="team-section">
+
+    <h2 class="team-title">Meet Our Team</h2>
+
+    <div class="team-grid">
+
+        <div class="team-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+            <h3>Rahul Mehta</h3>
+            <p>SEO Specialist</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+            <h3>Priya Shah</h3>
+            <p>Social Media Manager</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="">
+            <h3>Aman Patel</h3>
+            <p>Web Developer</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 DigiMarket Agency | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
