@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiMarket Agency</title>
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        header {
+            background: #111;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00aaff;
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url("https://images.unsplash.com/photo-1551434678-e076c223a692") center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            margin: 15px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #00aaff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0077aa;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        /* Services */
+        .grid {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* About */
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .about-text, .about-img {
+            flex: 1;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #111;
+            color: white;
+        }
+
+        .form {
+            width: 90%;
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form input,
+        .form textarea {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form button {
+            padding: 12px;
+            background: #00aaff;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form button:hover {
+            background: #0077aa;
+        }
+
+        /* Footer */
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="nav">
+        <h2 class="logo">DigiMarket</h2>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="../static_website/service.html">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Hero -->
+<section id="home" class="hero">
+    <div>
+        <h1>Grow Your Business Online</h1>
+        <p>SEO, Ads & Social Media Marketing Experts</p>
+        <a href="#contact" class="btn">Get Started</a>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+    <h2 class="title">Our Services</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>SEO Optimization</h3>
+            <p>Improve Google ranking and organic traffic.</p>
+        </div>
+
+        <div class="card">
+            <h3>Social Media Marketing</h3>
+            <p>Grow your brand on Instagram & Facebook.</p>
+        </div>
+
+        <div class="card">
+            <h3>Paid Ads</h3>
+            <p>High converting Google & Meta ads campaigns.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <h2 class="title">About Us</h2>
+
+    <div class="about">
+        <div class="about-text">
+            <p>
+                We are a modern digital marketing agency helping businesses grow online
+                using SEO, paid ads, and creative strategies.
+            </p>
+        </div>
+
+        <div class="about-img">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+    <h2 class="title">Contact Us</h2>
+
+    <form class="form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 DigiMarket Agency | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

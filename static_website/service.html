@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | DigiMarket</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+        }
+
+        /* Navbar */
+        header {
+            background: #111;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00aaff;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 50vh;
+            background:
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url("https://images.unsplash.com/photo-1460925895917-afdab827c52f")
+                center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+        }
+
+        /* Services */
+        .services-section {
+            padding: 80px 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #111;
+        }
+
+        .services-grid {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-card h2 {
+            margin-bottom: 15px;
+            color: #00aaff;
+        }
+
+        .service-card p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 22px;
+            background: #00aaff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0077aa;
+        }
+
+        /* Why Choose Us */
+        .why {
+            background: #111;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .why h2 {
+            font-size: 2.3rem;
+            margin-bottom: 25px;
+        }
+
+        .why p {
+            width: 80%;
+            margin: auto;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        /* Footer */
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .why p {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="nav">
+        <h2 class="logo">DigiMarket</h2>
+
+        <ul class="nav-links">
+            <li><a href="../static_website/home.html">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div>
+        <h1>Our Services</h1>
+        <p>Helping brands grow with powerful digital marketing solutions</p>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="services-section">
+
+    <h1 class="title">What We Offer</h1>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <h2>SEO Optimization</h2>
+            <p>
+                Improve your Google rankings and increase organic traffic
+                using advanced SEO strategies.
+            </p>
+
+            <div class="price">Starting ₹4999</div>
+
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+            <h2>Social Media Marketing</h2>
+            <p>
+                Grow your audience and engagement on Instagram,
+                Facebook, and LinkedIn.
+            </p>
+
+            <div class="price">Starting ₹6999</div>
+
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+            <h2>Google Ads</h2>
+            <p>
+                Run high-converting ad campaigns that generate
+                leads and increase sales quickly.
+            </p>
+
+            <div class="price">Starting ₹9999</div>
+
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+            <h2>Website Development</h2>
+            <p>
+                Build responsive and modern websites for your
+                business or startup brand.
+            </p>
+
+            <div class="price">Starting ₹14999</div>
+
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+            <h2>Content Marketing</h2>
+            <p>
+                Create engaging blogs, graphics, and content
+                that attract your target audience.
+            </p>
+
+            <div class="price">Starting ₹5999</div>
+
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+        <div class="service-card">
+            <h2>Email Marketing</h2>
+            <p>
+                Reach your customers directly with effective
+                email campaigns and automation.
+            </p>
+
+            <div class="price">Starting ₹3999</div>
+
+            <a href="#" class="btn">Learn More</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why">
+
+    <h2>Why Choose DigiMarket?</h2>
+
+    <p>
+        We combine creativity, marketing strategy, and technology
+        to help businesses grow online. Our goal is to provide
+        affordable and result-driven digital marketing services
+        for startups, brands, and local businesses.
+    </p>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 DigiMarket Agency | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
